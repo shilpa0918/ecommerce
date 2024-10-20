@@ -1,0 +1,12 @@
+server:
+  port: 9080
+spring:
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+    #ddl-auto: create
+  datasource:
+    url: jdbc:postgresql://localhost:5432/inventory
+    username: postgres
+    password: root
