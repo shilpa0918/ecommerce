@@ -10,7 +10,8 @@ import java.util.List;
 @Data
 @Builder
 @ToString
-public class AddProductRequest {
+public class UpdateProductRequest {
+    private Long productId;
     private String partNumber;
     private String name;
     private String description;

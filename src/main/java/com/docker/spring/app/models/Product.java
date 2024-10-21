@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @Table(name = "catentry")
@@ -22,6 +23,7 @@ public class Product {
     private String partNumber;
     private String name;
     private String description;
+    private Integer inventory;
     private BigDecimal offerPrice;
     private BigDecimal listPrice;
     private String brand;
@@ -29,5 +31,7 @@ public class Product {
     @ManyToOne(cascade = CascadeType.ALL)
     private Category category;
 
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Image> images;
 
 }
