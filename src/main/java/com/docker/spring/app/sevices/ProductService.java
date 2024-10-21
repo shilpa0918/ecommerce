@@ -2,11 +2,12 @@ package com.docker.spring.app.sevices;
 
 import com.docker.spring.app.domains.AddProductRequest;
 import com.docker.spring.app.domains.ProductDTO;
+import com.docker.spring.app.domains.UpdateProductRequest;
 
 public interface ProductService {
-    public ProductDTO addProduct(AddProductRequest addProductRequest);
-    public ProductDTO getProductByProductId(String productId);
-    public ProductDTO getProductByPartNumber(String productId);
-    public void deleteProduct(String productId);
-    public ProductDTO updateProduct(AddProductRequest addProductRequest);
+    ProductDTO addProduct(AddProductRequest addProductRequest);
+    ProductDTO getProductByProductId(String productId);
+    ProductDTO getProductByPartNumber(String productId);
+    void deleteProduct(String productId);
+    ProductDTO updateProduct(UpdateProductRequest addProductRequest);
 }

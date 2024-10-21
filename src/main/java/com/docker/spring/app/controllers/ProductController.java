@@ -3,6 +3,7 @@ package com.docker.spring.app.controllers;
 
 import com.docker.spring.app.domains.AddProductRequest;
 import com.docker.spring.app.domains.ProductDTO;
+import com.docker.spring.app.domains.UpdateProductRequest;
 import com.docker.spring.app.sevices.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -34,8 +35,8 @@ public class ProductController {
     }
 
     @PutMapping(path = "")
-    public ResponseEntity<ProductDTO> updateProduct(@RequestBody AddProductRequest addProductRequest){
-        ProductDTO product = productService.updateProduct(addProductRequest);
+    public ResponseEntity<ProductDTO> updateProduct(@RequestBody UpdateProductRequest updateProductRequest){
+        ProductDTO product = productService.updateProduct(updateProductRequest);
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(product);
     }
 
