@@ -3,6 +3,7 @@ package com.docker.spring.app.domains;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Builder
 @Data
@@ -18,5 +19,10 @@ public class ProductDTO {
     private BigDecimal offerPrice;
     private BigDecimal listPrice;
     private String brand;
+
+    private CategoryDTO category;
+    private List<ImageDTO> images;
+    private List<PriceDto> price;
+    private List<InventoryDto> inventories;
 
 }

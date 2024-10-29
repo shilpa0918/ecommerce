@@ -20,4 +20,6 @@ public class AddProductRequest {
     private String brand;
     private Long categoryId;
     private List<ImageDTO> images;
+    private List<PriceDto> priceDtos;
+    private List<InventoryDto> inventoryDtos;
 }
